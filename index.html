@@ -1,536 +1,413 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lo Vesto Bene — Sartorial & Technical Menswear</title>
-    <meta name="description" content="Selezione esclusiva di abbigliamento uomo di alta gamma, rigorosamente nuovo con cartellino. Autenticità garantita e misurazione sartoriale.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lo Vesto Bene — Sartorial & Technical Menswear</title>
+  <meta name="description" content="Selezione esclusiva di abbigliamento uomo di alta gamma, rigorosamente nuovo con cartellino. Autenticità garantita e misurazione sartoriale.">
 
-    <style>
-        :root {
-            --bg-primary: #09090B;
-            --bg-secondary: #111114;
-            --bg-card: #16161A;
-            --gold: #C6A355;
-            --gold-light: #DFC27D;
-            --text-primary: #F5F5F7;
-            --text-secondary: #A1A1AA;
-            --border-subtle: rgba(255, 255, 255, 0.08);
-            --border-gold: rgba(198, 163, 85, 0.35);
-            --font-serif: 'Cormorant Garamond', Georgia, serif;
-            --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-            --transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:title" content="Lo Vesto Bene — Sartorial & Technical Menswear">
+  <meta property="og:description" content="Selezione esclusiva di abbigliamento uomo di alta gamma, rigorosamente nuovo con cartellino. Autenticità garantita e misurazione sartoriale.">
+  <meta property="og:type" content="website">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-        body {
-            background-color: var(--bg-primary);
-            background-image: linear-gradient(to bottom, rgba(9, 9, 11, 0.78), rgba(9, 9, 11, 0.94)), url('sfondo.webp');
-            background-size: cover;
-            background-position: center top;
-            background-attachment: fixed;
-            color: var(--text-primary);
-            font-family: var(--font-sans);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
+  <style>
+    :root {
+      --bg-primary: #09090B;
+      --bg-secondary: #111114;
+      --bg-card: #16161A;
+      --gold: #C6A355;
+      --gold-light: #DFC27D;
+      --text-primary: #F5F5F7;
+      --text-secondary: #A1A1AA;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-gold: rgba(198, 163, 85, 0.35);
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      --transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
 
-        .container {
-            max-width: 780px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* HEADER */
-        header {
-            text-align: center;
-            padding: 64px 0 44px;
-            border-bottom: 1px solid var(--border-subtle);
-        }
+    body {
+      background-color: var(--bg-primary);
+      background-image: linear-gradient(to bottom, rgba(9, 9, 11, 0.78), rgba(9, 9, 11, 0.94)), url('sfondo.webp');
+      background-size: cover;
+      background-position: center top;
+      background-attachment: fixed;
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        .eyebrow {
-            display: inline-block;
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 0.28em;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: 16px;
-        }
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
 
-        .monogram {
-            width: 56px;
-            height: 56px;
-            margin: 0 auto 20px;
-            border: 1px solid var(--border-gold);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-serif);
-            font-size: 22px;
-            letter-spacing: 0.1em;
-            color: var(--gold);
-            background: rgba(198, 163, 85, 0.04);
-        }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        h1 {
-            font-family: var(--font-serif);
-            font-size: clamp(2.4rem, 6vw, 3.6rem);
-            font-weight: 600;
-            letter-spacing: 0.04em;
-            line-height: 1.1;
-            color: var(--text-primary);
-            margin-bottom: 14px;
-        }
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 64px 0 44px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
 
-        .subtitle {
-            font-size: 14px;
-            font-weight: 300;
-            color: var(--text-secondary);
-            max-width: 520px;
-            margin: 0 auto 32px;
-        }
+    .eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
 
-        /* BUTTONS */
-        .cta-group {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            max-width: 460px;
-            margin: 0 auto;
-        }
+    .monogram {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 20px;
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 22px;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      background: rgba(198, 163, 85, 0.04);
+    }
 
-        .btn-primary {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 18px 26px;
-            background: linear-gradient(135deg, var(--gold) 0%, #B38E3E 100%);
-            color: #09090B;
-            text-decoration: none;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            border: 1px solid var(--gold-light);
-            transition: var(--transition);
-        }
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 6vw, 3.6rem);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+      color: var(--text-primary);
+      margin-bottom: 14px;
+    }
 
-        .btn-primary:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-        }
+    .subtitle {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      max-width: 520px;
+      margin: 0 auto 32px;
+    }
 
-        .social-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
+    /* BUTTONS */
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-width: 460px;
+      margin: 0 auto;
+    }
 
-        .btn-secondary {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 16px;
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-primary);
-            text-decoration: none;
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            transition: var(--transition);
-        }
+    .btn-primary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 26px;
+      background: linear-gradient(135deg, var(--gold) 0%, #B38E3E 100%);
+      color: #09090B;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      border: 1px solid var(--gold-light);
+      transition: var(--transition);
+    }
 
-        .btn-secondary:hover {
-            border-color: var(--border-gold);
-            color: var(--gold-light);
-        }
+    .btn-primary:hover {
+      opacity: 0.92;
+      transform: translateY(-2px);
+    }
 
-        .btn-secondary svg, .btn-primary svg {
-            width: 16px;
-            height: 16px;
-            flex-shrink: 0;
-        }
+    .social-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
 
-        /* SECTIONS */
-        section {
-            padding: 52px 0;
-            border-bottom: 1px solid var(--border-subtle);
-        }
+    .btn-secondary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 16px;
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transition: var(--transition);
+    }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 36px;
-        }
+    .btn-secondary:hover {
+      border-color: var(--border-gold);
+      color: var(--gold-light);
+    }
 
-        .section-tag {
-            font-size: 10px;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: var(--gold);
-            display: block;
-            margin-bottom: 8px;
-        }
+    .btn-secondary svg,
+    .btn-primary svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
 
-        h2 {
-            font-family: var(--font-serif);
-            font-size: 2rem;
-            font-weight: 500;
-            color: var(--text-primary);
-        }
+    /* SECTIONS */
+    section {
+      padding: 52px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
 
-        /* PILLARS */
-        .pillars-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-        }
+    .section-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
 
-        .pillar-card {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-subtle);
-            padding: 26px 20px;
-            text-align: center;
-        }
+    .section-tag {
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 8px;
+    }
 
-        .pillar-icon {
-            width: 36px;
-            height: 36px;
-            margin: 0 auto 14px;
-            color: var(--gold);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    h2 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
 
-        .pillar-card h3 {
-            font-family: var(--font-serif);
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--text-primary);
-        }
+    /* PILLARS */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
 
-        .pillar-card p {
-            font-size: 12.5px;
-            font-weight: 300;
-            color: var(--text-secondary);
-            line-height: 1.55;
-        }
+    .pillar-card {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      padding: 26px 20px;
+      text-align: center;
+    }
 
-        .scarcity-banner {
-            margin-top: 24px;
-            padding: 14px 20px;
-            background: rgba(198, 163, 85, 0.06);
-            border-left: 2px solid var(--gold);
-            font-size: 12.5px;
-            color: var(--text-secondary);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+    .pillar-icon {
+      width: 36px;
+      height: 36px;
+      margin: 0 auto 14px;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .scarcity-banner strong {
-            color: var(--gold-light);
-            font-weight: 500;
-        }
+    .pillar-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
 
-        /* ACCORDION */
-        .accordion {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+    .pillar-card p {
+      font-size: 12.5px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
 
-        details {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-subtle);
-            transition: var(--transition);
-        }
+    .scarcity-banner {
+      margin-top: 24px;
+      padding: 14px 20px;
+      background: rgba(198, 163, 85, 0.06);
+      border-left: 2px solid var(--gold);
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-        details[open] {
-            border-color: var(--border-gold);
-        }
+    .scarcity-banner strong {
+      color: var(--gold-light);
+      font-weight: 500;
+    }
 
-        summary {
-            padding: 18px 22px;
-            cursor: pointer;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--text-primary);
-        }
+    /* ACCORDION */
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
 
-        summary::-webkit-details-marker {
-            display: none;
-        }
+    details {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      transition: var(--transition);
+    }
 
-        summary::after {
-            content: "+";
-            font-family: var(--font-serif);
-            font-size: 1.4rem;
-            color: var(--gold);
-        }
+    details[open] {
+      border-color: var(--border-gold);
+    }
 
-        details[open] summary::after {
-            transform: rotate(45deg);
-        }
+    summary {
+      padding: 18px 22px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+    }
 
-        .accordion-content {
-            padding: 0 22px 22px;
-            border-top: 1px solid var(--border-subtle);
-            overflow-x: auto;
-        }
+    summary::-webkit-details-marker {
+      display: none;
+    }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 16px;
-            font-size: 12.5px;
-            text-align: left;
-        }
+    summary::after {
+      content: "+";
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      line-height: 1;
+      color: var(--gold);
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
+    }
 
-        th {
-            padding: 10px 12px;
-            font-size: 10px;
-            font-weight: 600;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--gold);
-            border-bottom: 1px solid var(--border-gold);
-        }
+    details[open] summary::after {
+      transform: rotate(45deg);
+    }
 
-        td {
-            padding: 10px 12px;
-            color: var(--text-secondary);
-            border-bottom: 1px solid var(--border-subtle);
-        }
+    .accordion-content {
+      padding: 0 22px 22px;
+      border-top: 1px solid var(--border-subtle);
+      overflow-x: auto;
+    }
 
-        td:first-child {
-            color: var(--text-primary);
-            font-weight: 500;
-        }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 12.5px;
+      text-align: left;
+      white-space: nowrap;
+    }
 
-        .measure-guide {
-            margin-top: 16px;
-            font-size: 13px;
-            color: var(--text-secondary);
-        }
+    th {
+      padding: 10px 12px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border-bottom: 1px solid var(--border-gold);
+    }
 
-        .measure-guide p {
-            margin-bottom: 12px;
-        }
+    td {
+      padding: 10px 12px;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border-subtle);
+    }
 
-        .measure-guide ul {
-            list-style: none;
-            display: grid;
-            gap: 8px;
-        }
+    td:first-child {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
 
-        .measure-guide li strong {
-            color: var(--gold-light);
-            font-weight: 500;
-        }
+    .measure-guide {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
 
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 40px 0 48px;
-            font-size: 11px;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            color: var(--text-secondary);
-        }
+    .measure-guide p {
+      margin-bottom: 12px;
+    }
 
-        footer span {
-            color: var(--gold);
-        }
+    .measure-guide ul {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
 
-        @media (max-width: 680px) {
-            .pillars-grid, .social-row {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    .measure-guide li strong {
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 40px 0 48px;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    footer span {
+      color: var(--gold);
+    }
+
+    @media (max-width: 680px) {
+      body {
+        background-attachment: scroll;
+      }
+
+      header {
+        padding: 48px 0 36px;
+      }
+
+      .pillars-grid,
+      .social-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <!-- HEADER -->
+    <header>
+      <div class="monogram" aria-hidden="true">LVB</div>
+      <span class="eyebrow">Official Showcase</span>
+      <h1>Lo Vesto Bene</h1>
+      <p class="subtitle">
+        Selezione curata di abbigliamento uomo di alta gamma. Capi rigorosamente nuovi con cartellino originale, verificati singolarmente al millimetro.
+      </p>
 
-    <div class="container">
-        <!-- HEADER -->
-        <header>
-            <div class="monogram">LVB</div>
-            <span class="eyebrow">Official Showcase</span>
-            <h1>Lo Vesto Bene</h1>
-            <p class="subtitle">
-                Selezione curata di abbigliamento uomo di alta gamma. Capi rigorosamente nuovi con cartellino originale, verificati singolarmente al millimetro.
-            </p>
-
-            <div class="cta-group">
-                <a href="https://www.vinted.it/member/3198152889" target="_blank" rel="noopener" class="btn-primary">
-                    <span>Esplora la Vetrina su Vinted</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M13 5l7 7-7 7"/>
-                    </svg>
-                </a>
-
-                <div class="social-row">
-                    <a href="https://www.instagram.com/lovestobeneluxury/" target="_blank" rel="noopener" class="btn-secondary">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                            <rect x="2" y="2" width="20" height="20" rx="5"/>
-                            <circle cx="12" cy="12" r="4"/>
-                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-                        </svg>
-                        <span>Instagram</span>
-                    </a>
-
-                    <a href="https://www.facebook.com/LOVESTOBENELUXURY" target="_blank" rel="noopener" class="btn-secondary">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-                        </svg>
-                        <span>Facebook</span>
-                    </a>
-                </div>
-            </div>
-        </header>
-
-        <!-- PROTOCOLLO GARANZIA -->
-        <section>
-            <div class="section-header">
-                <span class="section-tag">Standard Qualitativo</span>
-                <h2>Il Protocollo Lo Vesto Bene</h2>
-            </div>
-
-            <div class="pillars-grid">
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                    </div>
-                    <h3>100% Autentici & Nuovi</h3>
-                    <p>Solo capi originali di fascia premium, mai indossati e completi di etichette e cartellini ufficiali.</p>
-                </div>
-
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M21 6H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1z"/>
-                            <path d="M6 6v4M10 6v2M14 6v4M18 6v2"/>
-                        </svg>
-                    </div>
-                    <h3>Misure Sartoriali</h3>
-                    <p>Ogni articolo viene misurato manualmente in piano al millimetro per garantirti una vestibilità impeccabile.</p>
-                </div>
-
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            <path d="M9 12l2 2 4-4"/>
-                        </svg>
-                    </div>
-                    <h3>Spedizione Protetta</h3>
-                    <p>Imballaggio curato, video-verifica pre-spedizione, sigillo antimanomissione e tutela integrale Vinted Pro.</p>
-                </div>
-            </div>
-
-            <div class="scarcity-banner">
-                <span>✦</span>
-                <div>
-                    <strong>Disponibilità Limitata:</strong> Trattandosi di pezzi unici selezionati, gli articoli in vetrina vengono venduti rapidamente. Verifica la disponibilità aggiornata sul profilo Vinted.
-                </div>
-            </div>
-        </section>
-
-        <!-- GUIDA ALLE TAGLIE -->
-        <section>
-            <div class="section-header">
-                <span class="section-tag">Size & Fit Reference</span>
-                <h2>Guida alle Taglie</h2>
-            </div>
-
-            <div class="accordion">
-                <!-- Top -->
-                <details>
-                    <summary>Top — Camicie, Polo & Maglieria</summary>
-                    <div class="accordion-content">
-                        <table>
-                            <thead>
-                                <tr><th>Taglia</th><th>Petto (cm)</th><th>Vita (cm)</th><th>Fianchi (cm)</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>XS</td><td>90.0 - 94.0</td><td>73.5 - 77.5</td><td>85.5 - 90.5</td></tr>
-                                <tr><td>S</td><td>94.0 - 98.0</td><td>77.5 - 81.5</td><td>90.5 - 95.5</td></tr>
-                                <tr><td>M</td><td>98.0 - 102.0</td><td>81.5 - 85.5</td><td>95.5 - 100.5</td></tr>
-                                <tr><td>L</td><td>102.0 - 106.0</td><td>85.5 - 89.5</td><td>100.5 - 105.5</td></tr>
-                                <tr><td>XL</td><td>106.0 - 110.0</td><td>89.5 - 93.5</td><td>105.5 - 110.5</td></tr>
-                                <tr><td>XXL</td><td>110.0 - 114.0</td><td>93.5 - 97.5</td><td>110.5 - 115.5</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </details>
-
-                <!-- Bottom / Jeans -->
-                <details>
-                    <summary>Bottom — Jeans & Pantaloni (Guida Misure)</summary>
-                    <div class="accordion-content">
-                        <div class="measure-guide">
-                            <p><strong>Come prendere le misure dei jeans (Riferimento Schema):</strong></p>
-                            <ul>
-                                <li><strong>A. Vita:</strong> Larghezza della cintura misurata in piano da estremità a estremità.</li>
-                                <li><strong>B. Fianchi:</strong> Larghezza misurata nella parte inferiore della tasca / punto massimo dei fianchi.</li>
-                                <li><strong>C. Cavallo Davanti:</strong> Distanza dalla cucitura centrale del cavallo fino alla fine della cintura superiore frontale.</li>
-                                <li><strong>D. Cavallo Dietro:</strong> Distanza dalla cucitura del cavallo fino alla cintura posteriore.</li>
-                                <li><strong>E. Caviglia / Fondo:</strong> Larghezza del fondo gamba.</li>
-                                <li><strong>F. Coscia:</strong> Larghezza della coscia misurata appena sotto l'attaccatura del cavallo.</li>
-                                <li><strong>G. Ginocchio:</strong> Larghezza misurata all'altezza del ginocchio.</li>
-                                <li><strong>1. Interno Gamba:</strong> Misura dall'attaccatura centrale del cavallo fino al fondo della gamba.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </details>
-
-                <!-- Come misurarsi -->
-                <details>
-                    <summary>Come prendere le misure sul corpo</summary>
-                    <div class="accordion-content">
-                        <div class="measure-guide">
-                            <p>Posizionati in piedi, mantieni una respirazione normale e utilizza un metro da sarta flessibile lasciando sempre uno spazio di due dita tra il metro e il corpo:</p>
-                            <ul>
-                                <li><strong>1. Petto:</strong> Misura attorno alla parte più ampia del torace, passando sotto le ascelle.</li>
-                                <li><strong>2. Vita:</strong> Misura attorno alla linea naturale della vita (il punto più stretto del busto).</li>
-                                <li><strong>3. Fianchi:</strong> Misura attorno alla parte più ampia dei fianchi mantenendo i piedi uniti.</li>
-                                <li><strong>4. Interno gamba:</strong> A piedi scalzi su superficie piana, misura dall'attaccatura del cavallo fino a terra.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </details>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
-        <footer>
-            © 2026 <span>Lo Vesto Bene</span> — All Rights Reserved.
-        </footer>
-    </div>
-
-</body>
-</html>
+      <div class="cta-group">
+        <a href="https://www.vinted.it/member/3198152889" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          <span>Esplora la Vetrina su Vinted</span>
